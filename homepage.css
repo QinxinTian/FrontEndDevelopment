@@ -1,0 +1,21 @@
+@charset "UTF-8";
+nav {
+    font-size: 14px;
+    font-family: georgia;
+    text-align: center;
+}
+div {
+    width: 119px;
+    border: solid 1px;
+    float: left;
+    padding: 10px 0;
+}
+body {
+   background-image: url("DSC01297_meitu_1.JPG");
+   background-color: #cccccc;
+   background-repeat: no-repeat;
+   background-attachment: fixed
+}
+nav {
+    font-size: 30px;
+}
