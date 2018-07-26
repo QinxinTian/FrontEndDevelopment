@@ -1,0 +1,41 @@
+<!-- Problem is that it only returns one result. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p><a id = "w3r" type = "text/html" hreflang = "en-us" rel = "nofollow" target = "_self"
+href="https://www.w3resource.com/">w3resource</a></p>
+<button onclick = "getAttributes()">Click here to get attributes value</button>
+<script>
+function getAttributes(){
+	var typee = document.getElementById("w3r").type;
+	document.write(typee);
+	var hreflangg = document.getElementById("w3r").hreflang;
+	document.write(hreflangg);
+	var rell = document.getElementById("w3r").rel;
+	document.write(rell);
+}
+</script>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html>-->

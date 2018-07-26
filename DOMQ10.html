@@ -1,0 +1,31 @@
+<!-- The formula is the 4pi*(r^3)/3 -->
+<!-- The difference between the title and the h3 are the about the definition, plays a title in a page, or used for the searching
+engine. --><!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Input radius and get the Volume</title>
+</head>
+<body>
+<h3>Input radius and get the Volume</h3>
+<p>Radius</p>
+<input type = "text" name = "r" value="">
+<input type = "button" id = "btnn" onclick = "rv()" value = "Click to get the volume.">
+<p>Volume</p>
+<p id = "btnn"></p>
+<script>
+//window.alert(rv());
+function rv(){
+	//var r = 3;
+	var r = document.getElementById("r").value;
+	window.alert(r);
+	var v;
+	//still does not work;
+	return Math.pow(r, 3)/3*Math.PI*4;
+	//window.alert(Math.PI)
+	//v = 4*Math.PI*Math.Pow(r, 3)/3;
+	//window.alert(v);
+}
+</script>
+</body>
+</html>

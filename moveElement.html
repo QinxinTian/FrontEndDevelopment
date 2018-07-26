@@ -1,0 +1,33 @@
+<table border="0">
+<tbody><tr>
+	<td>
+	<select name="list1" multiple="" size="10" ondblclick="moveSelectedOptions(this.form[&#39;list1&#39;],this.form[&#39;list2&#39;],true,this.form[&#39;movepattern1&#39;].value)">
+		
+		<option value="Bill">Bill</option>
+		<option value="Bob">Bob</option>
+		<option value="Jane">Jane</option>
+		
+	<option value="Matt">Matt</option></select>
+	</td>
+	<td valign="MIDDLE" align="CENTER">
+		<input type="button" name="right" value="&gt;&gt;" onclick="moveSelectedOptions(this.form[&#39;list1&#39;],this.form[&#39;list2&#39;],true,this.form[&#39;movepattern1&#39;].value)"><br><br>
+		<input type="button" name="right" value="All &gt;&gt;" onclick="moveAllOptions(this.form[&#39;list1&#39;],this.form[&#39;list2&#39;],true,this.form[&#39;movepattern1&#39;].value)"><br><br>
+		<input type="button" name="left" value="&lt;&lt;" onclick="moveSelectedOptions(this.form[&#39;list2&#39;],this.form[&#39;list1&#39;],true,this[&#39;form&#39;].movepattern1.value)"><br><br>
+		<input type="button" name="left" value="All &lt;&lt;" onclick="moveAllOptions(this.form[&#39;list2&#39;],this.form[&#39;list1&#39;],true,this.form[&#39;movepattern1&#39;].value)">
+	</td>
+	<td>
+	<select name="list2" multiple="" size="10" ondblclick="moveSelectedOptions(this.form[&#39;list2&#39;],this.form[&#39;list1&#39;],true,this.form[&#39;movepattern1&#39;].value)">
+		
+		<option value="Angela">Angela</option>
+		<option value="Fred">Fred</option>
+		<option value="George">George</option>
+		<option value="Jill">Jill</option>
+	<option value="Mary">Mary</option><option value="Ryan">Ryan</option></select>
+	</td>
+</tr>
+<tr>
+	<td colspan="3">
+	Do not allow moving of options matching pattern:<br><input type="text" name="movepattern1" value="">
+	</td>
+</tr>
+</tbody></table>

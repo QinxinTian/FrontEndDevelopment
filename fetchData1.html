@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<input type = "button" value = "click" onclick = "a()">
+<div id = "content"></div>
+</form>
+<script>
+function a(){
+var urls = [
+	  'https://api.github.com/users/iliakan',
+	  'https://api.github.com/users/remy',
+	  'https://api.github.com/users/jeresig'
+	];
+
+	// map every url to the promise fetch(github url)
+	var request = urls.map(url => fetch(url).then(response =>{
+		console.log(response)
+		if(response.status === 200){
+			return response.json();
+		}
+		else{
+			throw new Error(response.statusText)
+		}
+		}));
+	content.addEventListener("load", Promise.all(request)
+			.then(content => content.forEach(data =>{
+				var content = document.getElementById("content");
+				var newItem = document.createElement("p");
+				newItem.innerHTML = `DATA: ${data.login} {data:id}:${data.followers};`
+				//newItem.innerHTML = 'DATA: ${data.login} {data:id}:${data.followers};'
+				console.log(data)
+				content.appendChild(newItem);
+			})).catch(error => alert(error)))
+}
+</script>
+</body>
+</html>

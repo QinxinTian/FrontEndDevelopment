@@ -1,0 +1,65 @@
+<!-- For the createTextNode, I can't use comma in the content. -->
+<!-- remaining unfinished. -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Change the content of the cell</title>
+<style type = "text/css">
+body{margin:30x;}
+</style>
+</head>
+<body>
+<table id = "myTable" border = "1">
+</table>
+<form>
+<input type = "button" onclick="createTable()" value="Create the table">
+</form>
+<!--
+<script>
+function createTable(){
+	//window.alert("line0");
+	var bodyy = document.getElementsByTagName("body")[0];
+	//window.alert("line1");
+	var tablee = document.createElement("table")
+	var tableeborder = document.createElement("tbody");
+	//window.alert("line2");
+	for(var a = 0; a <= 2; a++){
+	var roww = document.createElement("tr");
+	//window.alert("line3")
+	for(var b = 0; b < 2; b++){
+	var celll = document.createElement("td");
+	//window.alert("line4");
+//Can't use comma;
+	var textt = document.createTextNode("Row-"+ a + "Column"+ b);
+	//window.alert("line5");
+	celll.appendChild(textt);
+	//window.alert("line6");
+	roww.appendChild(celll);
+//window.alert("line7");
+}
+tablee.appendChild(roww);
+//window.alert("line8");
+}
+tablee.appendChild(tableeborder);
+bodyy.appendChild(tablee);
+//window.alert("line9");
+tablee.setAttribute("border", "1");
+}
+</script>-->
+<script>
+function createTable(){
+	a = window.prompt("Input Number of the Row:", 1);
+	b = window.prompt("Input Number of the Column:", 1);
+	
+	for(var i = 0; i < parseInt(a, 10); i++){
+		var x = document.getElementById('myTable').insertRow(i);
+		for(var j = 0; j < parseInt(b, 10); j++){
+			var y = x.insertCell(j);
+			y.innerHTML = "Row-" + i + "Column-" + j);
+		}
+	}
+}
+</script>
+</body>
+</html>

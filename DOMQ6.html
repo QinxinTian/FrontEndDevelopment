@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table id = "sampleTable" border = "1">
+<tr><td>Row1 cell1</td>
+<td>Row2 cell2</td></tr>
+<tr><td>Row2 cell1</td>
+<td>Row2 cell2</td></tr>
+<tr><td>Row3 cell1</td>
+<td>Row3 cell2</td></tr></table><br>
+<form>
+<input type = "button" onclick = "changeContent()" value = "Change Content">
+</form>
+<script>
+//function changeContent(a, b, c)
+//c = document.getElementById("sampleTable").row[a].cell[b].innerHTML;
+function changeContent(){
+	//window.alert("a");
+	var a = window.prompt("Row Number: 0 or 1 or 2", "0");
+	var b = window.prompt("Column Number: 0 or 1");
+	var c = window.prompt("What is the content");
+	var x = document.getElementById("sampleTable").rows[parseInt(a, 10)].cells;
+	x[parseInt(b, 10)].innerHTML = c;
+}
+</script>
+</body>
+</html>

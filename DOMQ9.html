@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Count and display items of a dropdown list - w3resource</title>
+</head>
+<body>
+<form>
+Select your favorite Color:
+<select id="mySelect">
+<option>Green</option>
+<option>Blue</option>
+<option>White</option>
+</select></form>
+<input type="button" onclick="getOptions()" value="Count and Output all items">
+</form>
+<script>
+function getOptions(){
+var a = document.getElementById("mySelect").options.length;
+window.alert("There are in total " + a + " options");
+//wrong : window.alert(a.index[0]);
+for (var i = 0; i < a; i++){
+	var b = document.getElementById("mySelect").options[i].text;
+	window.alert(b);
+}
+}
+</script>
+</body>
+</html>
