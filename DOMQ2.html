@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html><head>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title></head>
+<!-- the problem is that it only shows the result directly, not showing the result after
+clicking into the button -->
+<script>
+function getFormvalue(){
+	var namevalue = document.getElementByID().value
+console.log(namevalue)
+}
+</script>
+<body>
+<form id = "form1" onsubmit = "getFormvalue()">
+First name:<input type="text" name="fname" value="aaa"><br>
+Last name:<input type="text" name="lname" value="bbb"><br>
+<input type="button" type ="submit" value="Submit">
+</form>
+<body>
+</body>
+</html>
